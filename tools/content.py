@@ -159,15 +159,15 @@ T = {
 # Set APP_STORE_ID (digits of https://apps.apple.com/app/id<ID>) on launch day: the "coming soon" line becomes a download link and every page gets the Safari smart banner.
 APP_STORE_ID = None
 FAQ_IDS = ["beat", "pro", "restore", "phones", "health", "watch", "ads", "delete"]
-SHOTS = [1, 2, 4, 5]  # lock screen, metronome, plan picker, overview stats
+SHOTS = [1, 2, 4, 5, 6]  # lock screen, metronome, plan picker, overview stats, monthly calendar
 FEATURE_ART = ["metronome", "plan", "watch", "privacy"]  # tools/assets-src/feat-<name>.webp, one per entry of "features" (tools/assets-src/shots/<lang>/<n>.webp)
 
 EXTRA = {
 "zh-Hant": dict(
     hero_title="跟著節拍，<br>慢慢跑。", rate="160–180 步/分", cta="查看常見問題",
     hero_alt="不同年齡與國籍的跑者在河岸步道一起慢跑", store_cta="在 App Store 下載",
-    shots_title="實際畫面", shots_label="App 畫面", shots_caption=["鎖屏也不斷拍", "跟著節拍，微笑慢慢跑", "免費 4 週入門課表", "每週趨勢與心率，一眼看懂"],
-    shots_alt=["鎖定畫面顯示跑步進度與節拍", "節拍器設定畫面：節拍與時間", "選擇跑步計畫的畫面", "總覽畫面：每週跑步時間長條圖與平均心率趨勢"],
+    shots_title="實際畫面", shots_label="App 畫面", shots_caption=["鎖屏也不斷拍", "跟著節拍，微笑慢慢跑", "免費 4 週入門課表", "每週趨勢與心率，一眼看懂", "每月打卡月曆，看見自己的堅持"],
+    shots_alt=["鎖定畫面顯示跑步進度與節拍", "節拍器設定畫面：節拍與時間", "選擇跑步計畫的畫面", "總覽畫面：每週跑步時間長條圖與平均心率趨勢", "每月回顧：本月跑步次數、天數、總時間與打卡月曆"],
     plans_title="免費與 Pro", plans_lead="Pro 是一次購買、永久使用、支援家人共享，不是訂閱。",
     free_title="免費", pro_title="Pro",
     free=["節拍器：160–180 步/分，聲音或手腕震動，鎖定畫面也能繼續",
@@ -185,8 +185,8 @@ EXTRA = {
 "zh-Hans": dict(
     hero_title="跟着节拍，<br>慢慢跑。", rate="160–180 步/分", cta="查看常见问题",
     hero_alt="不同年龄与国籍的跑者在河岸步道一起慢跑", store_cta="在 App Store 下载",
-    shots_title="实际画面", shots_label="App 画面", shots_caption=["锁屏也不断拍", "跟着节拍，微笑慢慢跑", "免费 4 周入门课表", "每周趋势与心率，一眼看懂"],
-    shots_alt=["锁屏显示跑步进度与节拍", "节拍器设置界面：节拍与时间", "选择跑步计划的界面", "总览界面：每周跑步时间柱状图与平均心率趋势"],
+    shots_title="实际画面", shots_label="App 画面", shots_caption=["锁屏也不断拍", "跟着节拍，微笑慢慢跑", "免费 4 周入门课表", "每周趋势与心率，一眼看懂", "每月打卡日历，看见自己的坚持"],
+    shots_alt=["锁屏显示跑步进度与节拍", "节拍器设置界面：节拍与时间", "选择跑步计划的界面", "总览界面：每周跑步时间柱状图与平均心率趋势", "每月回顾：本月跑步次数、天数、总时间与打卡日历"],
     plans_title="免费与 Pro", plans_lead="Pro 是一次购买、永久使用、支持家人共享，不是订阅。",
     free_title="免费", pro_title="Pro",
     free=["节拍器：160–180 步/分，声音或手腕振动，锁屏也能继续",
@@ -204,8 +204,8 @@ EXTRA = {
 "en": dict(
     hero_title="Run slow,<br>to the beat.", rate="160–180 steps/min", cta="See the FAQ",
     hero_alt="Runners of different ages and backgrounds slow jogging together along a riverside path", store_cta="Download on the App Store",
-    shots_title="Screenshots", shots_label="App screenshots", shots_caption=["The beat goes on, even locked", "Smile-and-chat pace, 180 steps/min", "Free 4-week beginner plan", "Weekly trends and heart rate at a glance"],
-    shots_alt=["Lock Screen showing run progress and the beat", "Metronome setup: cadence and duration", "Choosing a running plan", "Overview: weekly running minutes chart and average heart-rate trend"],
+    shots_title="Screenshots", shots_label="App screenshots", shots_caption=["The beat goes on, even locked", "Smile-and-chat pace, 180 steps/min", "Free 4-week beginner plan", "Weekly trends and heart rate at a glance", "A monthly calendar of every run"],
+    shots_alt=["Lock Screen showing run progress and the beat", "Metronome setup: cadence and duration", "Choosing a running plan", "Overview: weekly running minutes chart and average heart-rate trend", "Monthly recap: runs, days run and total time this month, with a check-in calendar"],
     plans_title="Free and Pro", plans_lead="Pro is a one-time purchase you keep for good, with Family Sharing. It is not a subscription.",
     free_title="Free", pro_title="Pro",
     free=["Metronome: 160–180 steps per minute, with sound or wrist taps, even on the Lock Screen",
@@ -223,8 +223,8 @@ EXTRA = {
 "ja": dict(
     hero_title="リズムに合わせて、<br>ゆっくり走ろう。", rate="160〜180歩/分", cta="よくある質問を見る",
     hero_alt="年齢も国籍もさまざまなランナーが川沿いの遊歩道をゆっくり走る様子", store_cta="App Store でダウンロード",
-    shots_title="アプリの画面", shots_label="アプリの画面", shots_caption=["画面ロックでもリズムが続く", "話せる速さで、リズムに合わせて", "無料の4週間入門メニュー", "週の推移と心拍数がひと目でわかる"],
-    shots_alt=["ロック画面に表示されるジョギングの進み具合とリズム", "メトロノームの設定画面：ビートと時間", "ジョギングプランの選択画面", "概要画面：週ごとのジョギング時間グラフと平均心拍数の推移"],
+    shots_title="アプリの画面", shots_label="アプリの画面", shots_caption=["画面ロックでもリズムが続く", "話せる速さで、リズムに合わせて", "無料の4週間入門メニュー", "週の推移と心拍数がひと目でわかる", "月ごとのカレンダーで続けた日がわかる"],
+    shots_alt=["ロック画面に表示されるジョギングの進み具合とリズム", "メトロノームの設定画面：ビートと時間", "ジョギングプランの選択画面", "概要画面：週ごとのジョギング時間グラフと平均心拍数の推移", "月間レポート：今月の回数・日数・合計時間とチェックインカレンダー"],
     plans_title="無料と Pro", plans_lead="Pro は買い切りでずっと使え、ファミリー共有にも対応。サブスクリプションではありません。",
     free_title="無料", pro_title="Pro",
     free=["メトロノーム：160〜180歩/分。音と手首の振動を選べ、画面ロック中も使えます",
