@@ -21,6 +21,11 @@ https://nexappsdev-services.github.io/JogBeat-Site/
 - 常見問題裡提到的 App 操作路徑與按鈕名稱,要和 App 裡實際的文字一致(App repo `iOS/Localizable.xcstrings`)。
 - 不加追蹤、分析或第三方腳本(隱私權政策寫明沒有),不載入外部字型。
 
+## 版面與素材
+- 首頁插畫 `tools/assets-src/hero.webp`(Codex 依設計稿畫的乾淨插畫:白底、無文字、左側淡出已畫進圖裡;要換圖時保持白底);App 畫面 `tools/assets-src/shots/<lang>/{1,2,4}.webp` 來自 App repo 的 App Store 截圖(每張 ≤ 200KB)。`build.py` 會把它們複製到 `assets/`。
+- 上架後把 `tools/content.py` 的 `APP_STORE_ID` 填上數字:「即將上架」會換成下載連結,每頁加上 Safari 智慧橫幅。官方徽章要另外下載 SVG 放進 `assets/`(使用者同意後),位置在 `build.py` 的註解處。
+- 隱私權政策頁的目錄、手機版表格卡片只是呈現方式;改完後要確認去掉標籤後的政策純文字與改之前一致。
+
 ## 發布後檢查
 push 後等 1–2 分鐘,確認下列網址都回 200,並實際打開看版面:
 根目錄、`privacy/`、`support/`,以及四種語言的首頁、`privacy/`、`support/`、`assets/style.css`。
