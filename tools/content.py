@@ -1,8 +1,8 @@
 # Per-language copy for the Jogbeat support site (landing + support FAQ). The privacy policy comes from docs/legal.
 EMAIL = "nexapps.dev@gmail.com"
-LANGS = ["zh-Hant", "zh-Hans", "en", "ja"]
-LANG_NAME = {"zh-Hant": "繁體中文", "zh-Hans": "简体中文", "en": "English", "ja": "日本語"}
-HTML_LANG = {"zh-Hant": "zh-Hant-TW", "zh-Hans": "zh-Hans-CN", "en": "en", "ja": "ja"}
+LANGS = ["zh-Hant", "zh-Hans", "en", "ja", "ko"]
+LANG_NAME = {"zh-Hant": "繁體中文", "zh-Hans": "简体中文", "en": "English", "ja": "日本語", "ko": "한국어"}
+HTML_LANG = {"zh-Hant": "zh-Hant-TW", "zh-Hans": "zh-Hans-CN", "en": "en", "ja": "ja", "ko": "ko"}
 
 T = {
 "zh-Hant": dict(
@@ -153,6 +153,43 @@ T = {
     terms="利用規約", terms_note="本アプリは Apple の標準使用許諾契約（EULA）を採用しています。",
     lang_label="言語",
 ),
+"ko": dict(
+    app="Jogbeat", tagline="슬로 조깅 메트로놈", nav_home="홈", nav_support="지원", nav_privacy="개인정보 처리방침",
+    hero="분당 160–180걸음의 비트에 맞춰, 웃으며 대화할 수 있는 속도로 천천히 달려요.",
+    soon="App Store 출시 예정",
+    features=[
+        ("메트로놈", "분당 160–180걸음. 소리와 손목 진동으로, 잠금 화면에서도 멈추지 않아요."),
+        ("워크아웃과 플랜", "무료 4주 입문 플랜. 구간 워크아웃은 구간이 바뀔 때 알려 줘요."),
+        ("Apple Watch", "손목에서 바로 러닝을 시작하고, 심박수 상한 알림도 받아요."),
+        ("건강 데이터는 내 기기에", "계정이 필요 없어요. 건강 데이터는 업로드되지 않고 광고에도 쓰이지 않아요."),
+    ],
+    support_title="지원", support_intro="문제가 있으면 먼저 아래 자주 묻는 질문을 확인해 주세요. 답을 찾지 못하면 이메일을 보내 주세요.",
+    contact_title="문의하기",
+    contact_body="<a href=\"mailto:{e}?subject=Jogbeat%20%EC%9D%98%EA%B2%AC\">{e}</a>(으)로 메일을 보내 주세요. 앱의 설정 → 정보 → 문의하기에서도 바로 보낼 수 있어요.",
+    contact_tip="가능하면 앱 버전(설정 → 정보 → 버전), iPhone / Apple Watch 모델과 OS 버전, 문제가 생긴 단계나 스크린샷을 함께 보내 주세요.",
+    faq_title="자주 묻는 질문",
+    faq=[
+        ("화면을 잠그거나 다른 앱으로 바꾸면 비트가 멈추나요?",
+         "아니요. 러닝 중에 화면을 잠그거나 다른 앱으로 바꿔도 비트 소리와 손목 진동은 계속되고, 잠금 화면과 Dynamic Island에 진행 상황이 표시돼요. 소리가 들리지 않으면 미디어 볼륨을 올리고, 앱에서 비트 소리가 켜져 있는지 확인해 주세요."),
+        ("Pro는 구독인가요?",
+         "아니요. Pro는 한 번 구입하면 계속 쓸 수 있고, 가족 공유도 지원해요."),
+        ("새 휴대폰이나 앱을 다시 설치한 뒤 Pro를 되찾으려면?",
+         "구입할 때 쓴 Apple 계정으로 App Store에 로그인한 뒤, 앱의 설정에서 구입 복원을 탭하세요."),
+        ("휴대폰을 바꾸면 러닝 기록이 사라지나요?",
+         "Pro에서는 설정 → iCloud 동기화를 켜면 러닝 기록과 설정이 본인의 iCloud에 보관돼요. 심박수나 강도 같은 건강 데이터는 iCloud로 동기화되지 않고 건강 앱에 남아요."),
+        ("심박수, 걸음 수, 거리가 보이지 않아요.",
+         "iPhone의 설정 → 개인정보 보호 및 보안에서 Jogbeat에 건강과 동작 및 피트니스 접근이 허용되어 있는지 확인해 주세요. 실외 거리는 위치 서비스도 필요해요. 심박수는 Apple Watch나 블루투스 심박 밴드가 있어야 해요."),
+        ("Apple Watch만으로 달릴 수 있나요?",
+         "네. Watch 앱을 설치하면 손목에서 바로 러닝을 시작할 수 있고, 기록은 iPhone으로 전송돼요."),
+        ("광고를 없애거나 맞춤형 광고를 끄려면?",
+         "무료 버전은 기록 탭 맨 아래에 배너 광고 하나만 표시되며, Pro를 구입하면 사라져요. 설정 → 정보 → 광고 개인정보 보호 옵션에서 동의를 바꾸거나, iPhone 설정 → 개인정보 보호 및 보안 → 추적에서 추적을 끌 수 있어요. 부적절한 광고는 배너 아래의 ‘부적절한 광고 신고’를 탭해 알려 주세요."),
+        ("내 데이터를 삭제하려면?",
+         "데이터는 기기에 있어요. 기록을 삭제하거나 앱을 삭제하면 돼요. iCloud와 건강 앱의 데이터는 <a href=\"../privacy/#s8\">개인정보 처리방침 8항</a>을 참고해 주세요."),
+    ],
+    disclaimer="Jogbeat는 일반적인 운동 정보를 제공하며 의학적 조언이 아니에요. 심장 질환, 임신, 만성 질환이 있거나 몸이 좋지 않다면 먼저 의사와 상담하고, 달리는 중 불편함을 느끼면 바로 멈추세요.",
+    terms="이용 약관", terms_note="앱은 Apple의 표준 라이선스 응용 프로그램 최종 사용자 사용권 계약(EULA)을 따릅니다.",
+    lang_label="언어",
+),
 }
 
 # Landing-page copy added with the 2026-10 restyle (hero, screenshots, Free vs Pro). Free / Pro lists follow AppStore/metadata/<lang>/description.txt; no prices.
@@ -238,6 +275,25 @@ EXTRA = {
          "iCloud同期：機種変更しても記録は消えません",
          "記録画面の広告を非表示"],
     toc_title="目次", lang_nav="言語", main_nav="メインメニュー", site_nav="サイトのリンク",
+),
+"ko": dict(
+    hero_title="비트에 맞춰,<br>천천히 달려요.", rate="분당 160–180걸음", cta="자주 묻는 질문 보기",
+    hero_alt="다양한 나이와 배경의 러너들이 강변 길을 함께 슬로 조깅하는 모습", store_cta="App Store에서 다운로드",
+    shots_title="앱 화면", shots_label="앱 화면", shots_caption=["잠금 화면에서도 비트가 계속돼요", "웃으며 대화할 수 있는 속도로", "무료 4주 입문 플랜", "주간 추이와 심박수를 한눈에", "월간 캘린더로 꾸준함을 확인해요"],
+    shots_alt=["러닝 진행 상황과 비트가 표시된 잠금 화면", "메트로놈 설정 화면: 비트와 시간", "러닝 플랜 선택 화면", "개요 화면: 주간 러닝 시간 막대 그래프와 평균 심박수 추이", "월간 리뷰: 이번 달 러닝 횟수, 달린 날, 총 시간과 체크인 캘린더"],
+    plans_title="무료와 Pro", plans_lead="Pro는 한 번 구입으로 계속 쓰며 가족 공유도 지원해요. 구독이 아니에요.",
+    free_title="무료", pro_title="Pro",
+    free=["메트로놈: 분당 160–180걸음, 소리나 손목 진동으로, 잠금 화면에서도 계속",
+          "러닝 플랜: 슬로 조깅 스타터 3주, 입문 4주",
+          "구간 워크아웃: 사용자 지정 1개와 입문 템플릿 2개 무료",
+          "Apple Watch 앱: 손목에서 바로 러닝 시작",
+          "잠금 화면, Dynamic Island, 위젯에 진행 상황 표시"],
+    pro=["라이브러리 워크아웃 10개 전체와 무제한 사용자 지정 워크아웃",
+         "더 많은 플랜: 9주 만에 30분 연속, 주 150분, 상급 300분",
+         "러닝 데이터 및 추세, 월간 리포트, 연간 리뷰, CSV·PDF 내보내기",
+         "iCloud 동기화로 휴대폰을 바꿔도 기록이 그대로",
+         "기록 화면 광고 제거"],
+    toc_title="목차", lang_nav="언어", main_nav="메인 메뉴", site_nav="사이트 링크",
 ),
 }
 for _l in T: T[_l].update(EXTRA[_l])

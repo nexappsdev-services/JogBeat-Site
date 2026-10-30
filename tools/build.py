@@ -50,7 +50,7 @@ def md_to_html(md):
 CSS = """:root{color-scheme:light dark;--bg:#FFFFFF;--card:#FFFFFF;--text:#14284B;--muted:#4B5B78;--line:#E3E8F0;--tint:#FFF4EC;--wash:#F2F6FA;--link:#B84A08;--btn:#E8601C;--btn-text:#FFFFFF}
 @media (prefers-color-scheme:dark){:root{--bg:#0F1623;--card:#172033;--text:#EEF2F8;--muted:#AAB7CC;--line:#2A3650;--tint:#2B2118;--wash:#131C2E;--link:#FF9F4A;--btn:#FF9F4A;--btn-text:#1F1205}}
 *{box-sizing:border-box}html{-webkit-text-size-adjust:100%;accent-color:var(--btn);scrollbar-color:var(--muted) transparent}::selection{background:var(--btn);color:var(--btn-text)}
-body:lang(ja){word-break:auto-phrase}.plan li{text-wrap:pretty}
+body:lang(ja){word-break:auto-phrase}body:lang(ko){word-break:keep-all;font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic","Noto Sans CJK KR",sans-serif}.plan li{text-wrap:pretty}
 body{margin:0;background:var(--bg);color:var(--text);font:17px/1.7 -apple-system,BlinkMacSystemFont,"Segoe UI","PingFang TC","PingFang SC","Hiragino Sans","Noto Sans CJK TC",sans-serif}
 a{color:var(--link);text-underline-offset:.15em}
 :focus-visible{outline:3px solid var(--link);outline-offset:2px;border-radius:4px}
@@ -135,7 +135,7 @@ def redirect(target_kind, depth):
     return f"""<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>跑拍 Jogbeat</title>
 <link rel="stylesheet" href="{up}assets/style.css"><script>
 (function(){{var n=(navigator.languages&&navigator.languages[0]||navigator.language||'en').toLowerCase(),l='en';
-if(/^zh-(hans|cn|sg|my)/.test(n))l='zh-Hans';else if(/^zh/.test(n))l='zh-Hant';else if(/^ja/.test(n))l='ja';
+if(/^zh-(hans|cn|sg|my)/.test(n))l='zh-Hans';else if(/^zh/.test(n))l='zh-Hant';else if(/^ja/.test(n))l='ja';else if(/^ko/.test(n))l='ko';
 location.replace('{up}'+l+'/{suffix}'+location.hash);}})();</script></head>
 <body><main><div class="wrap"><h1>跑拍 Jogbeat</h1><ul>{links}</ul></div></main></body></html>
 """
@@ -163,7 +163,7 @@ for lang in LANGS:
         # Launch day: Apple's official "Download on the App Store" badge (SVG kept in assets/, never hotlinked) goes here in place of this text link.
         store = f'<p class="soon"><a href="https://apps.apple.com/app/id{APP_STORE_ID}">{t["store_cta"]}</a></p>'
     else:
-        store = f'<p class="soon">{t["soon"]}{"." if lang == "en" else "。"}</p>'
+        store = f'<p class="soon">{t["soon"]}{"." if lang in ("en", "ko") else "。"}</p>'
     home = f"""<div class="wrap"><section class="hero"><div><h1>{t['hero_title']}</h1><p class="hero-meta">{t['tagline']}<span class="rate">{t['rate']}</span></p>
 <p class="lead">{t['hero']}</p>{store}<a class="btn" href="support/#faq">{t['cta']}</a></div>
 <img class="hero-art" src="../assets/hero.webp" width="1400" height="1050" alt="{html.escape(t['hero_alt'])}" fetchpriority="high"></section>
