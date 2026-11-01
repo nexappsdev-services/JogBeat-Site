@@ -92,7 +92,7 @@ h1{font-size:34px;line-height:1.3;margin:28px 0 8px;text-wrap:balance}.prose h2{
 @media (min-width:900px){.shot-row{overflow:visible;justify-content:center;gap:36px}.shot{flex:0 1 240px}}
 .plans-lead{color:var(--muted);margin:0 0 16px}
 .plans{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px}
-.plan{border:1px solid var(--line);border-radius:16px;padding:20px 22px;background:var(--card)}.plan.pro{border-color:var(--btn);border-width:2px;background:var(--tint)}
+.plan{border:1px solid var(--line);border-radius:16px;padding:20px 22px;background:var(--card)}.plan.ads{border-color:var(--btn);border-width:2px;background:var(--tint)}
 .plan h3{margin:0 0 8px;font-size:20px}.plan ul{margin:0;padding-left:1.2em}.plan li{margin:6px 0}
 .faq details{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:0 16px;margin:10px 0;scroll-margin-top:16px}.faq summary{cursor:pointer;font-weight:600;min-height:44px;padding:10px 0}.faq details p{margin:0 0 12px}.faq details:target{outline:2px solid var(--link)}
 .contact{background:var(--tint);border-radius:14px;padding:16px 18px}
@@ -169,7 +169,7 @@ for lang in LANGS:
 <img class="hero-art" src="../assets/hero.webp" width="1400" height="1050" alt="{html.escape(t['hero_alt'])}" fetchpriority="high"></section>
 <div class="features">{feats}</div></div>
 <section class="band"><div class="wrap"><h2>{t['shots_title']}</h2><div class="shot-row" role="group" tabindex="0" aria-label="{t['shots_label']}">{shots}</div></div></section>
-<div class="wrap"><section class="plans-sec"><h2>{t['plans_title']}</h2><p class="plans-lead">{t['plans_lead']}</p><div class="plans">{plan('free', t['free_title'], t['free'])}{plan('pro', t['pro_title'], t['pro'])}</div></section></div>"""
+<div class="wrap"><section class="plans-sec"><h2>{t['plans_title']}</h2><p class="plans-lead">{t['plans_lead']}</p><div class="plans">{plan('free', t['free_title'], t['free'])}{plan('ads', t['ads_title'], t['ads'])}</div></section></div>"""
     write(f"{OUT}/{lang}/index.html", page(lang, "home", f"{t['app']} — {t['tagline']}", home, 1, bare=True))
 
     faq = "".join(f'<details id="faq-{fid}"><summary>{q}</summary><p>{a}</p></details>' for fid, (q, a) in zip(FAQ_IDS, t["faq"]))
